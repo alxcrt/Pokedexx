@@ -10,12 +10,14 @@ function App() {
   const handleSearch = (searchTerm) => {
     // Search by name,id, type
     const filteredPokemon = pokedex.filter((pokemon) => {
-      console.log(pokemon.types);
-      if (
-        pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        pokemon.id.toString().includes(searchTerm)
-      ) {
-        return pokemon;
+      for (const type of pokemon.types) {
+        if (
+          pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          pokemon.id.toString().includes(searchTerm) ||
+          type.type.name.toLowerCase().includes(searchTerm.toLowerCase())
+        ) {
+          return true;
+        }
       }
     });
 
