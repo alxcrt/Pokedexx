@@ -1,0 +1,37 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+
+  border-radius: 15px;
+
+  width: 275px;
+  height: 200px;
+}
+
+.card img {
+  width: 130px;
+  height: 130px;
+}
+
+.card .header {
+  font-weight: bold;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.card .body {
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: space-around; */
+}
+
+.card .types {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}

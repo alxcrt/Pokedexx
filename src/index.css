@@ -1,13 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono:wght@400;700&display=swap");
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Space Mono, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+:root {
+  --white: #fff;
+  --grass-green: #78c84f;
+  --fire-red: #f08030;
+  --water-blue: #6890f0;
+  --electric-yellow: #f9d030;
+  --normal-gray: #a7a877;
+  --ghost-purple: #705998;
+  --flying-purple: #a890f0;
+  --poison-purple: #9f419f;
+  --psychic-purple: #f85888;
+  --rock-gray: #a7a877;
+  --ground-brown: #a3832d;
 }
