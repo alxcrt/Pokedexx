@@ -19,6 +19,7 @@ function App() {
           return true;
         }
       }
+      return false;
     });
 
     setFilteredPokemon(filteredPokemon);
