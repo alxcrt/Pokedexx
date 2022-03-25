@@ -31,7 +31,7 @@ function App() {
       setFilteredPokemon(resp);
     };
     fetchData();
-  }, []);
+  }, [fetchPokemonData]);
 
   window.onscroll = () => {
     if (pokemons.length > 151) {
