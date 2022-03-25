@@ -5,7 +5,7 @@ import "./App.css";
 import Card from "../Card/Card";
 import axios from "axios";
 
-const pokemonsOnPage = 10;
+const pokemonsOnPage = 20;
 
 function App() {
   const [pokemons, setPokemons] = useState([]);
