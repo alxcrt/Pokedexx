@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 // import pokedex from "../../data/data.json";
 import "./App.css";
@@ -11,7 +11,7 @@ function App() {
   const [pokemons, setPokemons] = useState([]);
   const [filteredPokemon, setFilteredPokemon] = useState([]);
 
-  const fetchPokemonData = async () => {
+  const fetchPokemonData = useCallback(async () => {
     const promiseArr = [];
     for (
       let i = pokemons.length + 1;
@@ -22,7 +22,7 @@ function App() {
     }
     const resolvedData = await Promise.all(promiseArr);
     return resolvedData.map((data) => data.data);
-  };
+  }, [pokemons]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,7 +31,7 @@ function App() {
       setFilteredPokemon(resp);
     };
     fetchData();
-  }, [fetchPokemonData]);
+  }, []);
 
   window.onscroll = () => {
     if (pokemons.length > 151) {
@@ -41,7 +41,7 @@ function App() {
       window.innerHeight + document.documentElement.scrollTop ===
       document.documentElement.offsetHeight
     ) {
-      fetchPokemonData(pokemons.length).then((newPokemons) => {
+      fetchPokemonData().then((newPokemons) => {
         setPokemons((prevPokemons) => [...prevPokemons, ...newPokemons]);
         setFilteredPokemon((prevPokemons) => [...prevPokemons, ...newPokemons]);
       });
