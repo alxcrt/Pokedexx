@@ -9,6 +9,13 @@
 
   width: 275px;
   height: 200px;
+
+  /* Remove text anchor */
+  /* text-decoration: none; */
+}
+
+a {
+  text-decoration: none;
 }
 
 .card img {
@@ -25,8 +32,6 @@
 
 .card .body {
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: space-around; */
 }
 
 .card .types {
