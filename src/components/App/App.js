@@ -4,6 +4,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import "./App.css";
 import Card from "../Card/Card";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const pokemonsOnPage = 20;
 
@@ -79,7 +80,10 @@ function App() {
     <div className="App">
       <div className="AppContainer">
         <div className="AppHeader">
-          <h1>Pokedex</h1>
+          <Link to="/">
+            <h1>Pokedex</h1>
+          </Link>
+
           <SearchBar onSearch={handleSearch} />
         </div>
 

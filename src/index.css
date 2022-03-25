@@ -10,7 +10,12 @@ code {
     monospace;
 }
 
-:root {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* :root {
   --white: #fff;
   --grass-green: #78c84f;
   --fire-red: #f08030;
@@ -28,4 +33,153 @@ code {
   --fighting-brown: #9f4239;
   --ice-blue: #6890f0;
   --dragon-green: #78c84f;
+} */
+
+.white {
+  background-color: #fff;
+}
+
+.grass {
+  background-color: #78c84f;
+}
+
+.fire {
+  background-color: #f08030;
+}
+
+.water {
+  background-color: #6890f0;
+}
+
+.electric {
+  background-color: #f9d030;
+}
+
+.normal {
+  background-color: #a7a877;
+}
+
+.ghost {
+  background-color: #705998;
+}
+
+.flying {
+  background-color: #a890f0;
+}
+
+.poison {
+  background-color: #9f419f;
+}
+
+.psychic {
+  background-color: #f85888;
+}
+
+.rock {
+  background-color: #a7a877;
+}
+
+.ground {
+  background-color: #a3832d;
+}
+
+.bug {
+  background-color: #9bc53d;
+}
+
+.fairy {
+  background-color: #f9b7b7;
+}
+
+.fighting {
+  background-color: #9f4239;
+}
+
+.ice {
+  background-color: #6890f0;
+}
+
+.dragon {
+  background-color: #78c84f;
+}
+
+.pokemon-content {
+  align-items: center;
+  min-height: 100vh;
+}
+
+.pokemon-content-upper {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pokemon-artwork-card {
+  align-items: center;
+  border-radius: 10px;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  min-width: 535px;
+}
+
+.pokemon-artwork-card-header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.pokemon-id-info {
+  margin-left: 30px;
+}
+
+.pokemon-types-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.type-card-container {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 7px;
+  color: #042440;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin: 10px;
+  padding: 5px 10px;
+}
+
+.card-container {
+  align-items: center;
+  border: 0.1px solid #042440;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #bfbfbf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  transition: -webkit-filter 0.25s;
+  transition: filter 0.25s;
+  transition: filter 0.25s, -webkit-filter 0.25s;
+}
+
+.pokemon-info-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  padding: 30px;
 }
