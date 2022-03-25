@@ -10,6 +10,7 @@ const pokemonsOnPage = 20;
 function App() {
   const [pokemons, setPokemons] = useState([]);
   const [filteredPokemon, setFilteredPokemon] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchPokemonData = useCallback(async () => {
     const promiseArr = [];
@@ -25,12 +26,20 @@ function App() {
   }, [pokemons]);
 
   useEffect(() => {
+    setLoading(true);
     const fetchData = async () => {
       const resp = await fetchPokemonData();
       setPokemons(resp);
       setFilteredPokemon(resp);
+      setLoading(false);
     };
     fetchData();
+
+    // Clean up
+    return () => {
+      setPokemons([]);
+      setFilteredPokemon([]);
+    };
   }, []);
 
   window.onscroll = () => {
@@ -74,11 +83,15 @@ function App() {
           <SearchBar onSearch={handleSearch} />
         </div>
 
-        <div id="pokedex">
-          {filteredPokemon.map((pokemon) => {
-            return <Card key={pokemon.id} pokemon={pokemon} />;
-          })}
-        </div>
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+          <div id="pokedex">
+            {filteredPokemon.map((pokemon) => {
+              return <Card key={pokemon.id} pokemon={pokemon} />;
+            })}
+          </div>
+        )}
       </div>
     </div>
   );
